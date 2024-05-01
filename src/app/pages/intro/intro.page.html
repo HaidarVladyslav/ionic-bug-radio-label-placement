@@ -1,0 +1,35 @@
+<ion-content class="intro">
+  <swiper-container #swiper id="swiper" pagination="true">
+    <swiper-slide>
+      <h1>Welcome to yout expese tracker!</h1>
+      The best way to track your expenses
+      <ion-button expand="block" color="light" (click)="next()">
+        Configure your app
+      </ion-button>
+    </swiper-slide>
+
+    <swiper-slide>
+      <h1>Setup your app</h1>
+
+      <ion-list>
+        <ion-radio-group [(ngModel)]="currency" ngDefaultControl>
+          <ion-list-header>Currency</ion-list-header>
+
+          <ion-item>
+            <ion-radio labelPlacement="end" value="eur">Euro</ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-radio label-placement="end" value="usd">Dollar</ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-radio label-placement="end" value="gbp">Pound</ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </swiper-slide>
+
+    <swiper-slide>Slide 3</swiper-slide>
+  </swiper-container>
+</ion-content>
